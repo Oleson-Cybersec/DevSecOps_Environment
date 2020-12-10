@@ -36,8 +36,8 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Jump Box | Gateway  | 10.1.0.4   | Linux            |
 | Web--1   | DVWA     | 10.1.0.5   | Linux            |
 | Web--2   | DVWA     | 10.1.0.6   | Linux            |
-| Web--2   | DVWA     | 10.1.0.6   | Linux            |
 | Web--3   | DVWA     | 10.1.0.7   | Linux            |
+| Elk_VM   | Elk      | 40.122.64.99 | Linux          |
 
 ### Access Policies
 
