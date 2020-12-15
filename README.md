@@ -28,13 +28,12 @@ The configuration details of each machine may be found below.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 52.183.72.48   | Linux            |
-|  |  | 10.1.0.4 | |
-| Web--1   | DVWA     | 10.1.0.5   | Linux            |
-| Web--2   | DVWA     | 10.1.0.6   | Linux            |
-| Web--3   | DVWA     | 10.1.0.7   | Linux            |
-| Elk_VM   | Elk      | 40.122.64.99 | Linux          |
-| LB | Loadbalancer | 52.246.248.118 | Windows |
+| Jump Box | Gateway  | 52.183.72.48     | Linux |
+| Web--1   | DVWA     | 52.246.248.118   | Linux |
+| Web--2   | DVWA     | 52.246.248.118   | Linux |
+| Web--3   | DVWA     | 52.246.248.118   | Linux |
+| Elk_VM   | Elk      | 40.122.64.99     | Linux |
+| LB | Loadbalancer   | 52.246.248.118  | Windows |
 
 ### Access Policies
 
@@ -46,9 +45,9 @@ Only the jumpbox provisoner virutal machine can accept connections from the Inte
 
 Machines within the network can only be accessed by the internal Web VM's.
 
-| Web--1 | Web--2 | Web--3 |
-|--------|--------|--------|
-| 10.1.0.5 | 10.1.0.6 | 10.1.0.7 |
+| Jumpbox | Web--1 | Web--2 | Web--3 |
+|---------|--------|--------|--------|
+| 10.1.0.4 | 10.1.0.5 | 10.1.0.6 | 10.1.0.7 |
 
 A summary of the access policies in place can be found in the table below.
 
@@ -95,11 +94,12 @@ In order to use the playbook, you will need to have an Ansible control node alre
 SSH into the control node and follow the steps below:
 - Copy the docker-playbook.yml file to your jumpbox.
 - Update the file to include the appropriate IP addresses.
-- Run the playbook, and navigate to ____ to check that the installation worked as expected.
+- Run the playbook, and navigate to http://40.122.64.99:5601/app/kibana#/home/tutorial/systemLogs to check that the filebeat installation worked as expected.
+- To verify metricbeat, navigate to http://40.122.64.99:5601/app/kibana#/home/tutorial/dockerMetrics
 
-_TODO: Answer the following questions to fill in the blanks:_
-- _Which file is the playbook? Where do you copy it?_
-- _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-- _Which URL do you navigate to in order to check that the ELK server is running?
-
+To navigate to verify the ELK server is running, check your ELK's Public IP
+  * http://40.122.64.99:5601/app/kibana#/discover?_g=(refreshInterval:(pause:!t,value:0),time:(from:now-15m,to:now))&_a=(columns:!(_source),index:'filebeat-*',interval:auto,query:(language:kuery,query:''),sort:!(!('@timestamp',desc)))
+  
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
+To run the playbooks, and update the files, use the following: 
+    - ansible-playbook {install_file}.yml {hostgroup}
