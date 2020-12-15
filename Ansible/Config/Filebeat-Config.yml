@@ -1,6 +1,6 @@
 #Scroll to line #1108 and replace the IP address with the IP address of your ELK machine.
 #Scroll to line #1808 and replace the IP address with the IP address of your ELK machine.
-#
+############################################################################
 ######################## Filebeat Configuration ############################
 # This file is a full configuration example documenting all non-deprecated
 # options in comments. For a shorter configuration example, that contains only
