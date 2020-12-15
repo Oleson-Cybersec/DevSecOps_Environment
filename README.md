@@ -28,7 +28,8 @@ The configuration details of each machine may be found below.
 
 | Name     | Function | IP Address | Operating System |
 |----------|----------|------------|------------------|
-| Jump Box | Gateway  | 10.1.0.4   | Linux            |
+| Jump Box | Gateway  | 52.183.72.48   | Linux            |
+|  |  | 10.1.0.4 | |
 | Web--1   | DVWA     | 10.1.0.5   | Linux            |
 | Web--2   | DVWA     | 10.1.0.6   | Linux            |
 | Web--3   | DVWA     | 10.1.0.7   | Linux            |
@@ -47,7 +48,7 @@ Machines within the network can only be accessed by the internal Web VM's.
 
 | Web--1 | Web--2 | Web--3 |
 |--------|--------|--------|
-| 10.1.0.6 | 10.1.0.7 | 10.1.0.8 |
+| 10.1.0.5 | 10.1.0.6 | 10.1.0.7 |
 
 A summary of the access policies in place can be found in the table below.
 
@@ -55,9 +56,9 @@ A summary of the access policies in place can be found in the table below.
 |---------------------|-------|------------------------------|
 | Jump Box          | Yes     | Personal IP Address only     |
 | ELK VM            | No      | Personal IP Address only     |
-| Web--1            | No      | 10.1.0.5, 10.1.0.7, 10.1.0.8 |
-| Web--2            | No      | 10.1.0.5, 10.1.0.6, 10.1.0.8 |
-| Web--3            | No      | 10.1.0.5, 10.1.0.6, 10.1.0.7 | 
+| Web--1            | No      | 10.1.0.4, 10.1.0.6, 10.1.0.7 |
+| Web--2            | No      | 10.1.0.4, 10.1.0.5, 10.1.0.7 |
+| Web--3            | No      | 10.1.0.4, 10.1.0.5, 10.1.0.6 | 
 | Loadbalancer      | Yes     | Any IP Address               |
 
 
