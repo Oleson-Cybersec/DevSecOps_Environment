@@ -74,7 +74,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-https://github.com/OlesonCrypto/DevSecOps_Environment/blob/main/Pictures/Docker%20ps%20output.PNG
+https://github.com/OlesonCrypto/DevSecOps_Environment/blob/main/Pictures/Docker_PS_Output.PNG
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
