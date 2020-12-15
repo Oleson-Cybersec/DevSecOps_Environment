@@ -81,12 +81,12 @@ This ELK server is configured to monitor the following machines:
 - 52.246.248.118 (Public IP address of the loadbalancer that distributes to the Web VM's)
 
 We have installed the following Beats on these machines:
--Filebeats
--Metricbeats
+* Filebeats
+* Metricbeats
 
 These Beats allow us to collect the following information from each machine:
--Filebeats logs files and activities of a system to review on Kibana
--Metricbbeats periodically collects metrics and statistics of a system to review on Kibana
+* Filebeats logs files and activities of a system to review on Kibana
+* Metricbbeats periodically collects metrics and statistics of a system to review on Kibana
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
