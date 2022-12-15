@@ -2,7 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-https://github.com/OlesonCrypto/DevSecOps_Environment/blob/main/Diagrams/Red_Team_Topology.png
+https://github.com/Oleson-Cybersec/DevSecOps_Environment/blob/main/Pictures/Red_Team_Topology.png
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the playbook.yml files may be used to install only certain pieces of it, such as Filebeat or Metricbeat.
 
